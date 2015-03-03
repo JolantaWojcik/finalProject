@@ -10,6 +10,8 @@ class Movies {
 	
 	public function find($movie = null) {
 		if($movie) {
+			//is_numeric — Finds whether a variable is a number or a numeric string
+			// Returns TRUE if var is a number or a numeric string, FALSE otherwise. bleee
 			$field = (is_numeric($movie)) ? 'id' : 'title';
 			$data = $this->_db->get('movie', array($field, '=', $movie));
 
@@ -24,6 +26,9 @@ class Movies {
 	public function data() {
 		return $this->_data;
 	}
+	
+	//http://www.w3schools.com/sql/sql_distinct.asp
+	//SELECT DISTINCT column_name,column_name FROM table_name;
 	
 	public function getgenres() {
 		$genre = $this->_db->getdistinct('movie', 'genre');
