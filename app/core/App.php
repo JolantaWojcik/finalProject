@@ -11,7 +11,8 @@ class App
 		$url = $this->parseUrl();
 		
 		//jeśli będzie coś innego poza istniejącymi kontrolerami, wywoła home
-		if(file_exists('../app/controllers/' . $url[0] . '.php'))   //nie zapominać, że wywołujemy z directory /public/index.php
+		if(file_exists('../app/controllers/' . $url[0] . '.php'))   
+		// wywołujemy z directory /public/index.php
 		{
 			$this->controller = $url[0];
 			unset($url[0]);
