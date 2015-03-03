@@ -23,14 +23,15 @@ class Actor {
 	}
 	
 	public function findactorbyfilm($movieid = null) {   //podajemy id filmu
-		if($movieid) {   //jeœli podaliœmy...
-			$actordata = $this->_db->get('movie_aktorzy', array('movie_id', '=', $movieid)); //...to wydobywamy dane z intersection table dla tego id filmu
+		if($movieid) {   //jeÅ“li podaliÅ“my...
+			$actordata = $this->_db->get('movie_aktorzy', array('movie_id', '=', $movieid)); 
+			//...to wydobywalo dane z intersection table dla tego id filmu
 			
-			if($actordata->count()) {  //jeœli w tabeli coœ jest
+			if($actordata->count()) {  //jeÅ“li w tabeli coÅ“ jest
 				$this->_actordata = $actordata->results(); //to przypisujemy te dane do zmiennej $_actordata
 			}
 			
-			$actorlist = array(); //tworzymy pust¹ tablicê i bêdziemy j¹ po kolei wype³niaæ nazwiskami
+			$actorlist = array(); //tworzymy pustÂ¹ tablicÃª i bÃªdziemy jÂ¹ po kolei wypeÂ³niaÃ¦ nazwiskami
 			
 			foreach($this->actordata() as $key => $value) {
 				$data = $this->_db->get('aktorzy', array('id', '=', $value->aktorzy_id));
