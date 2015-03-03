@@ -1,5 +1,6 @@
 <?php
 //model
+//first wyswietlac elementy tablicy uwzgledniajac to, ze to tablica
 class Actor {
 	private $_data;
 	private $_actordata; //tablica z obiektami z tabeli movie_aktorzy
