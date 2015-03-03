@@ -1,5 +1,12 @@
 <?php
 //model
+//w $data zapisywane sa wynik z bazy danych
+//jesli count, czyli jesli istnieje, to wyrzuc pierwszy wynik
+//samo select oddaje caly rzad np film ze wszystkimi danymi jak id i title == object
+//$obiekt->id
+//_results to tablica
+//first ma wyswietlac elementy tablicy uwzgledniajac to, ze to tablica :(
+
 class Order {
 	private $_movieid; //tablica ze wszystkimi rekordami, które mają id $usera
 	private $_data;
@@ -49,7 +56,8 @@ class Order {
 					} catch(Exception $e) {
 						die($e->getMessage());
 						}
-				$this->email('39dz@gazeta.pl');
+						//tak czy inaczej to nie śmiga
+				$this->email('jola.j.wk@gmail.com');
 					}
 		}
 	}
