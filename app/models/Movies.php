@@ -31,6 +31,7 @@ class Movies {
 	
 	//http://www.w3schools.com/sql/sql_distinct.asp
 	//SELECT DISTINCT column_name,column_name FROM table_name;
+	//define somwhere else getdistinct('movie', 'genre');
 	
 	public function getgenres() {
 		$genre = $this->_db->getdistinct('movie', 'genre');
