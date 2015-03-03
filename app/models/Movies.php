@@ -17,6 +17,7 @@ class Movies {
 
 			if($data->count()) {
 				$this->_data = $data->first();
+				//wyswietlac elementy tablicy uwzgledniajac to, ze to tablica głowa mała...
 				return true;
 			}
 		}
