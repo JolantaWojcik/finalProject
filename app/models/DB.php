@@ -8,6 +8,7 @@ class DB {
 			$_count = 0;
 				
 	private function __construct() {
+		//http://php.net/manual/pl/pdo.construct.php
 		try {
 			$this->_pdo = new PDO('mysql:host=' . Config::get('mysql/host') . ';dbname=' . Config::get('mysql/db'), Config::get('mysql/username'), Config::get('mysql/password'));
 			if(isset($_GET['url'])) {
